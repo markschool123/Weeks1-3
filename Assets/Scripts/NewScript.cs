@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FirstScript : MonoBehaviour
+public class NewScript : MonoBehaviour
 {
     float speed = 0.01f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,14 +13,13 @@ public class FirstScript : MonoBehaviour
     void Update()
     {
         Vector3 newPosition = transform.position;
-        newPosition.x = +speed;
+        newPosition.x += speed;
         transform.position = newPosition; ;
 
-        Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position); 
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPos.x < 0 || screenPos.x > Screen.width)
         {
             speed = speed * -1;
         }
-        
     }
 }
