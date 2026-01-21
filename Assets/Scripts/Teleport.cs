@@ -24,10 +24,12 @@ public class Teleport : MonoBehaviour
         {
 
 
+                Vector2 Telly = Camera.main.WorldToScreenPoint(transform.position);
+                Telly.x = Random.Range(-5f, 5f);
+                Telly.y = Random.Range(-5f, 5f);
+                transform.position = Telly; 
+                timerUp = false;
 
-            transform.position = Random.onUnitSphere;
-            timerUp = false;
-
-        }
+        }   
     }
 }
