@@ -25,7 +25,7 @@ public class Pulse : MonoBehaviour
         }
         //get curve value at time t
         y = curve.Evaluate(t);
-        // set the scale based opn the curve value, making the object grow/shrink over time
+        // set the scale based opn the curve value, making the object grow/shrink over time.
         transform.localScale = Vector2.one * curve.Evaluate(t);
         
     }
