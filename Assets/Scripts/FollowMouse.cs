@@ -12,6 +12,7 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //grab muouse current location and connect it to transform
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mousePos.z = 0;
         transform.position= mousePos;
