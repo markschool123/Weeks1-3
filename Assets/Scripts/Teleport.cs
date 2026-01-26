@@ -13,13 +13,16 @@ public class Teleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //timer float counts up seconds
         timer += Time.deltaTime;
 
+        //once the timer reaches one second, reset to 0
         if (timer > 1)
         {
             timerUp = true;
             timer = 0;
         }
+        // when the timer is up, teleport the portal to a random position
         if (timerUp == true)
         {
 
